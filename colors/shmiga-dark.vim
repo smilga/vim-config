@@ -30,7 +30,7 @@ hi Normal ctermfg=231 ctermbg=235 cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NON
 hi Boolean ctermfg=135 ctermbg=NONE cterm=NONE guifg=#af5fff guibg=NONE gui=NONE
 "hi Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Comment ctermfg=245 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
-hi Conditional ctermfg=226 ctermbg=NONE cterm=NONE guifg=#ffff00 guibg=NONE gui=NONE
+hi Conditional ctermfg=226 ctermbg=NONE guifg=#ffff00 guibg=NONE 
 hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi Define ctermfg=208 ctermbg=NONE cterm=NONE guifg=#ff8700 guibg=NONE gui=NONE
 "hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bold
@@ -52,11 +52,11 @@ hi PreProc ctermfg=39 ctermbg=NONE guifg=#00afff guibg=NONE
 "hi SpecialComment ctermfg=242 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
 "hi SpecialKey ctermfg=59 ctermbg=237 cterm=NONE guifg=#49483e guibg=#3c3d37 gui=NONE
 "hi Statement ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi StorageClass ctermfg=76 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
+hi StorageClass ctermfg=76 ctermbg=NONE cterm=NONE guifg=#5fd700 guibg=NONE
 hi String ctermfg=179 ctermbg=NONE cterm=NONE guifg=#afaf5f guibg=NONE gui=NONE
 "hi Tag ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 "hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE gui=bold
-hi Todo ctermfg=95 ctermbg=NONE cterm=inverse,bold guifg=#75715e guibg=NONE gui=inverse,bold
+hi Todo ctermfg=95 ctermbg=NONE guifg=#75715e guibg=NONE 
 hi Type ctermfg=226 ctermbg=NONE cterm=NONE guifg=#ffff00 guibg=NONE gui=NONE
 "hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 
@@ -95,6 +95,7 @@ hi def link jsFloat Float
 hi def link jsObjectFuncName Define
 hi def link jsTemplateString String
 hi def link jsTemplateBraces String 
+hi! def link jsReturn Conditional
 
 hi phpSpecialFunction ctermfg=135 ctermbg=NONE guifg=#af5fff guibg=NONE
 hi phpStorageClass ctermfg=208 ctermbg=NONE guifg=#ff8700 guibg=NONE

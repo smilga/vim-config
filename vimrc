@@ -32,6 +32,7 @@ Plugin 'posva/vim-vue'                          "Syntax highlight for .vue files
 "Plugin 'isRuslan/vim-es6'
 "Plugin 'darthmall/vim-vue'
 "Plugin 'chunqian/vim-vue'
+Plugin 'faith/vim-go'
 call vundle#end()
 
 
@@ -163,6 +164,10 @@ nmap <C-\> :NERDTreeToggle<cr>
 "/Ctrlp buff tag"
 "/
 nmap <c-R> :CtrlPBufTag<cr>
+"/
+"/Faith vim-go mappings
+"
+nmap <Leader>god :GoDef<cr>
 
 "}}}
 

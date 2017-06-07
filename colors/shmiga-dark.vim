@@ -105,6 +105,15 @@ hi phpInclude ctermfg=208 ctermbg=NONE guifg=#ff8700 guibg=NONE
 hi phpVarSelector ctermfg=76 ctermbg=NONE guifg=#5fd700 guibg=NONE
 hi phpRepeat ctermfg=208 ctermbg=NONE guifg=#ff8700 guibg=NONE
 
+hi goType ctermfg=38
+hi goSignedInts ctermfg=38
+hi goDirective ctermfg=248
+hi goDeclaration ctermfg=153
+hi goFormatSpecifier ctermfg=94
+hi goEscapeC ctermfg=71
+hi goString ctermfg=193
+hi goPredefinedIdentifiers ctermfg=38
+
 hi yamlKey ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi yamlAnchor ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi yamlAlias ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE

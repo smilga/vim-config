@@ -108,11 +108,12 @@ hi phpRepeat ctermfg=208 ctermbg=NONE guifg=#ff8700 guibg=NONE
 hi goType ctermfg=38
 hi goSignedInts ctermfg=38
 hi goDirective ctermfg=248
-hi goDeclaration ctermfg=153
+hi goDeclaration ctermfg=110
 hi goFormatSpecifier ctermfg=94
 hi goEscapeC ctermfg=71
 hi goString ctermfg=193
 hi goPredefinedIdentifiers ctermfg=38
+hi goFunction ctermfg=41
 
 hi yamlKey ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi yamlAnchor ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE

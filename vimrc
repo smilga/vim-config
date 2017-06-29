@@ -24,15 +24,10 @@ Plugin 'airblade/vim-gitgutter'                 "Shows git diffs
 Plugin 'ryanoasis/vim-devicons'                 "Shows file icons
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
-"Plugin 'sheerun/vim-polyglot'
 Plugin 'posva/vim-vue'                          "Syntax highlight for .vue files
-"Plugin 'vim-syntastic/syntastic'                "Grammar checker (needs third party chekcers)
-"Plugin 'pangloss/vim-javascript'                "Javascript syntax highlights
-"Plugin 'crusoexia/vim-javascript-lib'
-"Plugin 'isRuslan/vim-es6'
-"Plugin 'darthmall/vim-vue'
-"Plugin 'chunqian/vim-vue'
 Plugin 'faith/vim-go'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 
 
@@ -215,6 +210,10 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+"/
+"/ EMMET
+"/
+let g:user_emmet_leader_key='<leader>'
 "}}}
 
 "-------------------------------- Autocommands {{{
@@ -325,6 +324,10 @@ endfunc
 "   :sbuffer{n} - split buffer                       "
 "   :bufdo      - close all bufers                   "
 "===================================================="
-
+"/                                                   "
+"/ MULTISELEC                                           "
+"/                                                   "
+"   select multiple ctrl + n
+"===================================================="
 "/File specific settings
 " vim:foldmethod=marker:foldlevel=0

@@ -28,6 +28,8 @@ Plugin 'posva/vim-vue'                          "Syntax highlight for .vue files
 Plugin 'faith/vim-go'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mattn/emmet-vim'
+Plugin 'tikhomirov/vim-glsl'
+Plugin 'KabbAmine/vullScreen.vim'
 call vundle#end()
 
 
@@ -81,10 +83,10 @@ set hidden
 nmap <leader>T :enew<cr>
 
 " Move to the next buffer
-nmap <leader>l :bnext<CR>
+nmap <leader>bn :bn<CR>
 
 " Move to the previous buffer
-nmap <leader>h :bprevious<CR>
+nmap <leader>bp :bp<CR>
 
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
@@ -121,7 +123,8 @@ set textwidth=0 wrapmargin=0
 
 
 
-
+inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
+inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
 
 
@@ -177,7 +180,7 @@ let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 "/ Airaline
 "/
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#fnamemod = ':t' "show only tab names not full path
 let g:airline_theme='simple'
 "/
 "/ Nerdtree

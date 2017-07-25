@@ -22,16 +22,19 @@ Plugin 'ervandew/supertab'                      "Allow to use tabs for autocompl
 Plugin 'vim-airline/vim-airline'                "Shows toolbars
 Plugin 'vim-airline/vim-airline-themes'         "Statusbar themes
 Plugin 'airblade/vim-gitgutter'                 "Shows git diffs
-Plugin 'ryanoasis/vim-devicons'                 "Shows file icons
+"Plugin 'ryanoasis/vim-devicons'                 "Shows file icons
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'posva/vim-vue'                          "Syntax highlight for .vue files
-Plugin 'faith/vim-go'
+Plugin 'faith/vim-go'							"Awesome GOlang plugin
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'mattn/emmet-vim'
-Plugin 'tikhomirov/vim-glsl'
+Plugin 'mattn/emmet-vim'						
+Plugin 'tikhomirov/vim-glsl'					"GLSL shader language highlights
 Plugin 'KabbAmine/vullScreen.vim'
 Plugin '2072/PHP-Indenting-for-VIm'             "Correct indentation for php files
+Plugin 'jiangmiao/auto-pairs'					"Brackets managing
+Plugin 'vim-scripts/mru'                        "Open recently edited files
+Plugin 'Xuyuanp/nerdtree-git-plugin'            "Shows git file changes in NERDtree
 call vundle#end()
 
 
@@ -133,7 +136,8 @@ inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
 set complete=.,w,b,u
 
-set tabstop=8
+set tabstop=4
+"set tabstop=8
 set expandtab!
 set softtabstop=4
 set shiftwidth=4
@@ -191,7 +195,7 @@ let NERDTreeHijackNetrw = 0
 "/
 "/ DevIcons
 "/
-set encoding=utf8
+"set encoding=utf8
 "/
 "/ Syntastic
 "/
@@ -219,6 +223,11 @@ let g:go_highlight_build_constraints = 1
 "/ EMMET
 "/
 let g:user_emmet_leader_key='<leader>'
+"/
+"/ MRU
+"/
+let MRU_Max_Entries = 400
+map <leader>f :MRU<CR>
 "}}}
 
 "-------------------------------- Autocommands {{{

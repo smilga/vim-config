@@ -58,7 +58,7 @@ hi String ctermfg=249 ctermbg=NONE cterm=NONE guifg=#b2b2b2 guibg=NONE gui=NONE
 hi Tag ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE gui=bold
 hi Todo ctermfg=5 ctermbg=NONE guifg=#00ffff guibg=NONE 
-hi Type ctermfg=123 ctermbg=NONE cterm=NONE guifg=#87ffff guibg=NONE gui=NONE
+hi Type ctermfg=166 ctermbg=NONE cterm=NONE guifg=#87ffff guibg=NONE gui=NONE
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 
 hi def link htmlTag String
@@ -76,7 +76,7 @@ hi def link jsFuncArgs Type
 hi def link jsClassFuncName Function
 hi def link jsClassKeyword StorageClass
 hi def link jsString String
-hi jsObjectBraces ctermfg=245 ctermbg=NONE guifg=#8a8a8a guibg=NONE
+hi def link jsObjectBraces Normal
 hi! def link jsClassDefinition Conditional
 hi def link jsThis Conditional
 hi def link jsNumber Number
@@ -98,6 +98,7 @@ hi def link jsObjectFuncName Function
 hi def link jsTemplateString String
 hi def link jsTemplateBraces String 
 hi! def link jsReturn Conditional
+hi def link jsFunctionKey Function
 
 hi! def link phpSpecialFunction FunctionBuiltin
 hi! def link phpStorageClass StorageClass

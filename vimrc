@@ -1,5 +1,6 @@
 set nocompatible
 set modelines=1                      "Vim reads last lines for file specific settings
+set noswapfile
 
 "-------------------------------- Plugins {{{
 
@@ -30,6 +31,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mattn/emmet-vim'
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'KabbAmine/vullScreen.vim'
+Plugin '2072/PHP-Indenting-for-VIm'             "Correct indentation for php files
 call vundle#end()
 
 
@@ -60,7 +62,7 @@ set guioptions-=L  "remove left-hand scroll bar
 highlight LineNr guifg=#d7d7d7 guibg=bg                 
 
 "}}}
-set guifont=ProFontIIx\ Nerd\ Font\ Book
+set guifont=DroidSansMonoForPowerline\ Nerd\ Font\ Bold
 set lsp=8
 
 "}}}
@@ -132,7 +134,7 @@ inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 set complete=.,w,b,u
 
 set tabstop=8
-set expandtab
+set expandtab!
 set softtabstop=4
 set shiftwidth=4
 set nowrap
@@ -242,6 +244,10 @@ endfunc
 
 "}}}
                                                      
+"------------------------FONT------------------------"
+"My top fonts for terminal VIM:			     "
+" 1. Mono Space: https://fonts.google.com/specimen/Space+Mono?selection.family=Space+Mono 
+"===================================================="
 "---------------------CHEATSHEET---------------------"
 "/                                                   "
 "/ SELECTION                                         "
@@ -276,6 +282,12 @@ endfunc
 "   ctrl + f    - page down                          "
 "   ctrl + b    - page up                            "
 "   ctrl + {,}  - paragraf next, before              "
+" 						     "
+"   gd will take you to the local declaration.       "
+"   gD will take you to the global declaration.      "
+"   g* search for the word under the cursor          " 
+"   * find words same as under cursor                "
+"                                                    "
 "   %           - next matching bracket              "
 "===================================================="
 "/                                                   "

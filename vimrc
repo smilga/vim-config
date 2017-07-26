@@ -18,6 +18,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'           "dependency
 Plugin 'tomtom/tlib_vim'                        "dependency
 Plugin 'garbas/vim-snipmate'                    "Allow to use snippets
 Plugin 'tpope/vim-surround'                     "Change surrounding 
+Plugin 'tpope/vim-fugitive'                     "Git plugin 
 Plugin 'ervandew/supertab'                      "Allow to use tabs for autocomplete
 Plugin 'vim-airline/vim-airline'                "Shows toolbars
 Plugin 'vim-airline/vim-airline-themes'         "Statusbar themes
@@ -192,6 +193,7 @@ let g:airline_theme='simple'
 "/ Nerdtree
 "/
 let NERDTreeHijackNetrw = 0
+let NERDTreeShowExecutableFlag = 0
 "/
 "/ DevIcons
 "/

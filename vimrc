@@ -26,7 +26,7 @@ Plugin 'airblade/vim-gitgutter'                 "Shows git diffs
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'posva/vim-vue'                          "Syntax highlight for .vue files
-Plugin 'faith/vim-go'							"Awesome GOlang plugin
+Plugin 'fatih/vim-go'							"Awesome GOlang plugin
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mattn/emmet-vim'						
 Plugin 'tikhomirov/vim-glsl'					"GLSL shader language highlights

@@ -35,7 +35,6 @@ Plugin 'KabbAmine/vullScreen.vim'
 Plugin '2072/PHP-Indenting-for-VIm'             "Correct indentation for php files
 Plugin 'jiangmiao/auto-pairs'					"Brackets managing
 Plugin 'vim-scripts/mru'                        "Open recently edited files
-Plugin 'Xuyuanp/nerdtree-git-plugin'            "Shows git file changes in NERDtree
 call vundle#end()
 
 
@@ -150,6 +149,12 @@ set laststatus=2
 
 "-------------------------------- Mappings {{{
 "/
+"/Misc
+"/
+"Save with leader-w 
+"/
+nmap <leader>w :w<cr>
+"/
 "/Make it easy to edit the Vimrc file.
 "/
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
@@ -173,6 +178,10 @@ nmap <c-R> :CtrlPBufTag<cr>
 "/Faith vim-go mappings
 "
 nmap <Leader>god :GoDef<cr>
+
+"/
+"/Split resize
+"/
 
 "}}}
 

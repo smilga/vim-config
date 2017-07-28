@@ -256,8 +256,10 @@ endfunc
 "}}}
                                                      
 "------------------------FONT------------------------"
-"My top fonts for terminal VIM:			     "
-" 1. Mono Space: https://fonts.google.com/specimen/Space+Mono?selection.family=Space+Mono 
+"/                                                   "
+"/ My top fonts for terminal VIM:			         "
+"/
+"    1. Mono Space: https://fonts.google.com/specimen/Space+Mono?selection.family=Space+Mono 
 "===================================================="
 "---------------------CHEATSHEET---------------------"
 "/                                                   "
@@ -300,6 +302,16 @@ endfunc
 "   * find words same as under cursor                "
 "                                                    "
 "   %           - next matching bracket              "
+"                                                    "
+"/ CORRECTING TYPED TEXT                             "
+"                                                    "
+"   F - [a-z]   - moves cursor to selected char left "
+"   [1-9] - b   - moves cursor n words back          " 
+"   in insert mode:									 "
+"   ctrl + w    - deltes previous word				 "
+"   ctrl + h	- backspace							 "
+"   ctrl + u	- delete to beginning of line		 "
+"   alt  + b	- go back a word					 "
 "===================================================="
 "/                                                   "
 "/ EDITING                                           "

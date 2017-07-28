@@ -26,11 +26,11 @@ hi Search ctermfg=NONE ctermbg=237 cterm=underline guifg=NONE guibg=#3a3a3a gui=
 hi Directory ctermfg=80 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Folded ctermfg=242 ctermbg=235 cterm=NONE guifg=#75715e guibg=#272822 gui=NONE
 hi SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
-hi Normal ctermfg=231 ctermbg=235 cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
+hi Normal ctermfg=231 ctermbg=234 cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
 hi Boolean ctermfg=177 ctermbg=NONE cterm=NONE guifg=#d787ff guibg=NONE gui=NONE
 hi Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Comment ctermfg=245 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
-hi Conditional ctermfg=191 ctermbg=NONE guifg=#d7ff5f guibg=NONE 
+hi Conditional ctermfg=172 ctermbg=NONE guifg=#d78700 guibg=NONE 
 hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi Define ctermfg=191 ctermbg=NONE cterm=NONE guifg=#d7ff5f guibg=NONE gui=NONE
 hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bold
@@ -53,11 +53,11 @@ hi Special ctermfg=135 ctermbg=NONE cterm=NONE guifg=#af5fff guibg=NONE gui=NONE
 hi SpecialComment ctermfg=242 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
 hi SpecialKey ctermfg=59 ctermbg=237 cterm=NONE guifg=#49483e guibg=#3c3d37 gui=NONE
 hi Statement ctermfg=191 ctermbg=NONE cterm=NONE guifg=#ffff5f guibg=NONE gui=NONE
-hi StorageClass ctermfg=44 ctermbg=NONE cterm=NONE guifg=#00d7d7 guibg=NONE
+hi StorageClass ctermfg=51 ctermbg=NONE cterm=NONE guifg=#00d7d7 guibg=NONE
 hi String ctermfg=249 ctermbg=NONE cterm=NONE guifg=#b2b2b2 guibg=NONE gui=NONE
 hi Tag ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE gui=bold
-hi Todo ctermfg=5 ctermbg=NONE guifg=#00ffff guibg=NONE 
+hi Todo ctermfg=14 ctermbg=NONE cterm=italic guifg=#00ffff guibg=NONE 
 hi Type ctermfg=166 ctermbg=NONE cterm=NONE guifg=#87ffff guibg=NONE gui=NONE
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 
@@ -80,13 +80,14 @@ hi def link jsObjectBraces Normal
 hi! def link jsClassDefinition Conditional
 hi def link jsThis Conditional
 hi def link jsNumber Number
-hi! def link jsFunction Define
+hi! def link jsFunction StorageClass
 hi! def link jsFuncName Function
 hi jsGlobalObjects ctermfg=135 ctermbg=NONE guifg=#ffafff guibg=NONE
 hi def link jsArrowFunction Function
 hi def link jsComment Comment 
 hi! def link jsCommentTodo Todo
 hi def link jsCommentNote Todo
+hi def link jsCommentBug Todo
 hi def link jsImport Conditional
 hi def link jsFrom Conditional
 hi def link jsExportDefault Conditional

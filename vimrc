@@ -13,6 +13,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'                   
 Plugin 'tpope/vim-vinegar'                      "Upgrades default directory browser
 Plugin 'scrooloose/nerdtree'                    "Ads Treeview
+Plugin 'scrooloose/nerdcommenter'               "Comment/uncomment
 Plugin 'ctrlpvim/ctrlp.vim'                     "Ads ctrl P
 Plugin 'MarcWeber/vim-addon-mw-utils'           "dependency
 Plugin 'tomtom/tlib_vim'                        "dependency
@@ -35,6 +36,9 @@ Plugin 'KabbAmine/vullScreen.vim'
 Plugin '2072/PHP-Indenting-for-VIm'             "Correct indentation for php files
 Plugin 'jiangmiao/auto-pairs'					"Brackets managing
 Plugin 'vim-scripts/mru'                        "Open recently edited files
+Plugin 'junegunn/goyo.vim'                      "Distractin free mode
+Plugin 'mileszs/ack.vim'						"Search
+Plugin 'qpkorr/vim-bufkill'						"Buffer killer (leave splits untouched)
 call vundle#end()
 
 
@@ -239,6 +243,17 @@ let g:user_emmet_leader_key='<leader>'
 "/
 let MRU_Max_Entries = 400
 map <leader>f :MRU<CR>
+"/
+"/ Ack
+"/
+"Open a new tab and search for something
+nmap <leader>a :tab split<CR>:Ack ""<Left>
+"Search for the work under cursor
+nmap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
+"/
+"/Bufkill
+"/
+nmap <leader>bd :BD<CR>
 "}}}
 
 "-------------------------------- Autocommands {{{

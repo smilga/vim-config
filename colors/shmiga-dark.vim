@@ -3,7 +3,7 @@ set background=dark
 highlight clear
 
 if exists("syntax_on")
-  syntax reset
+syntax reset
 endif
 
 set t_Co=256
@@ -27,12 +27,12 @@ hi Directory ctermfg=80 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NON
 hi Folded ctermfg=242 ctermbg=235 cterm=NONE guifg=#75715e guibg=#272822 gui=NONE
 hi SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
 hi Normal ctermfg=231 ctermbg=234 cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
-hi Boolean ctermfg=177 ctermbg=NONE cterm=NONE guifg=#d787ff guibg=NONE gui=NONE
+hi Boolean ctermfg=171 ctermbg=NONE cterm=NONE guifg=#d75fff guibg=NONE gui=NONE
 hi Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Comment ctermfg=245 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
-hi Conditional ctermfg=172 ctermbg=NONE guifg=#d78700 guibg=NONE 
+hi Comment ctermfg=60 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
+hi Conditional ctermfg=11 ctermbg=NONE guifg=#ffff00 guibg=NONE 
 hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi Define ctermfg=191 ctermbg=NONE cterm=NONE guifg=#d7ff5f guibg=NONE gui=NONE
+hi Define ctermfg=11 ctermbg=NONE cterm=NONE guifg=#ffff00 guibg=NONE gui=NONE
 hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bold
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0807 guibg=NONE gui=NONE
 hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 gui=NONE
@@ -42,23 +42,23 @@ hi WarningMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui
 hi Float ctermfg=174 ctermbg=NONE cterm=NONE guifg=#d78787 guibg=NONE gui=NONE
 hi Function ctermfg=83 ctermbg=NONE cterm=NONE guifg=#5fff5f guibg=NONE gui=NONE
 hi FunctionBuiltin ctermfg=83 ctermbg=NONE cterm=italic guifg=#5fff5f guibg=NONE gui=italic
-hi Identifier ctermfg=39 ctermbg=NONE cterm=italic guifg=#00afff guibg=NONE gui=italic
+hi Identifier ctermfg=207 ctermbg=NONE cterm=italic guifg=#00afff guibg=NONE gui=italic
 hi Keyword ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi Label ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
 hi NonText ctermfg=59 ctermbg=236 cterm=NONE guifg=#49483e guibg=#31322c gui=NONE
-hi Number ctermfg=174 ctermbg=NONE cterm=NONE guifg=#d78787 guibg=NONE gui=NONE
-hi Operator ctermfg=191 ctermbg=NONE cterm=NONE guifg=#d7ff5f guibg=NONE gui=NONE
+hi Number ctermfg=171 ctermbg=NONE cterm=NONE guifg=#d75fff guibg=NONE gui=NONE
+hi Operator ctermfg=11 ctermbg=NONE cterm=NONE guifg=#ffff00 guibg=NONE gui=NONE
 hi PreProc ctermfg=39 ctermbg=NONE guifg=#00afff guibg=NONE
 hi Special ctermfg=135 ctermbg=NONE cterm=NONE guifg=#af5fff guibg=NONE gui=NONE
 hi SpecialComment ctermfg=242 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
 hi SpecialKey ctermfg=59 ctermbg=237 cterm=NONE guifg=#49483e guibg=#3c3d37 gui=NONE
-hi Statement ctermfg=191 ctermbg=NONE cterm=NONE guifg=#ffff5f guibg=NONE gui=NONE
+hi Statement ctermfg=11 ctermbg=NONE cterm=NONE guifg=#ffff00 guibg=NONE gui=NONE
 hi StorageClass ctermfg=51 ctermbg=NONE cterm=NONE guifg=#00d7d7 guibg=NONE
 hi String ctermfg=249 ctermbg=NONE cterm=NONE guifg=#b2b2b2 guibg=NONE gui=NONE
 hi Tag ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE gui=bold
 hi Todo ctermfg=14 ctermbg=NONE cterm=italic guifg=#00ffff guibg=NONE 
-hi Type ctermfg=166 ctermbg=NONE cterm=NONE guifg=#87ffff guibg=NONE gui=NONE
+hi Type ctermfg=202 ctermbg=NONE cterm=NONE guifg=#87ffff guibg=NONE gui=NONE
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 
 hi def link htmlTag String
@@ -82,7 +82,7 @@ hi def link jsThis Conditional
 hi def link jsNumber Number
 hi! def link jsFunction StorageClass
 hi! def link jsFuncName Function
-hi jsGlobalObjects ctermfg=135 ctermbg=NONE guifg=#ffafff guibg=NONE
+hi! def link jsGlobalObjects Number
 hi def link jsArrowFunction Function
 hi def link jsComment Comment 
 hi! def link jsCommentTodo Todo
@@ -101,7 +101,8 @@ hi def link jsTemplateBraces String
 hi! def link jsReturn Conditional
 hi def link jsFunctionKey Function
 
-hi! def link phpSpecialFunction FunctionBuiltin
+hi! def link phpSpecialFunctions FunctionBuiltin
+hi! def link phpFunctions FunctionBuiltin
 hi! def link phpStorageClass StorageClass
 hi def link phpDefine Define
 hi! def link phpIdentifier Normal
@@ -131,6 +132,7 @@ hi! def link goRepeat Conditional
 hi! def link goPredefinedIdentifiers Identifier
 hi def link goConditional Conditional
 hi def link goFloat Number
+hi! def link goVar StorageClass
 
 hi yamlKey ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi yamlAnchor ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE

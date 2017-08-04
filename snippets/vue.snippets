@@ -1,0 +1,28 @@
+snippet temp
+	<template>
+	</template>
+
+	<script>
+	export default {
+		components:{},
+		name: '${1:name}',
+		props: [],
+		data() {
+			return {
+			}
+		},
+		computed: {
+		},
+		methods: {
+		},
+		mounted() {
+			console.log('init ${1}');
+		}
+	}
+	</script>
+
+	<style lang="scss">
+	</style>
+
+snippet log
+	console.log('${1}')

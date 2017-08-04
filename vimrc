@@ -39,6 +39,7 @@ Plugin 'vim-scripts/mru'                        "Open recently edited files
 Plugin 'junegunn/goyo.vim'                      "Distractin free mode
 Plugin 'mileszs/ack.vim'						"Search
 Plugin 'qpkorr/vim-bufkill'						"Buffer killer (leave splits untouched)
+Plugin 'Valloric/YouCompleteMe'                 "Autocomplete
 call vundle#end()
 
 
@@ -191,6 +192,10 @@ nmap <Leader>god :GoDef<cr>
 
 "-------------------------------- Plugin specific {{{
 
+"/
+"/YouCompleteMe
+"/
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 "/
 "/ CtrlP
 "/

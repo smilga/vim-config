@@ -19,7 +19,7 @@ hi VertSplit ctermfg=235 ctermbg=235 cterm=NONE guifg=#64645e guibg=NONE gui=NON
 hi MatchParen ctermfg=161 ctermbg=NONE cterm=underline guifg=#d7005f guibg=NONE gui=underline,bold
 hi StatusLine ctermfg=231 ctermbg=241 cterm=bold guifg=#f8f8f2 guibg=#64645e gui=bold
 hi StatusLineNC ctermfg=231 ctermbg=241 cterm=NONE guifg=#f8f8f2 guibg=#64645e gui=NONE
-hi Pmenu ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi Pmenu ctermfg=NONE ctermbg=244 cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#49483e gui=NONE
 hi IncSearch ctermfg=235 ctermbg=186 cterm=NONE guifg=#272822 guibg=#e6db74 gui=NONE
 hi Search ctermfg=NONE ctermbg=237 cterm=underline guifg=NONE guibg=#3a3a3a gui=underline

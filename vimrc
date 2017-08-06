@@ -160,6 +160,9 @@ set laststatus=2
 "/
 nmap <leader>w :w<cr>
 "/
+"/Refresh syntax highlight with leader-r
+"/
+nmap <leader>r :syntax sync fromstart<cr>
 "/Make it easy to edit the Vimrc file.
 "/
 nmap <Leader>ev :tabedit $MYVIMRC<cr>

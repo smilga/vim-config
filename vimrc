@@ -40,6 +40,9 @@ Plugin 'junegunn/goyo.vim'                      "Distractin free mode
 Plugin 'mileszs/ack.vim'						"Search
 Plugin 'qpkorr/vim-bufkill'						"Buffer killer (leave splits untouched)
 Plugin 'Valloric/YouCompleteMe'                 "Autocomplete
+if has('nvim') 
+    Plugin 'eugen0329/vim-esearch'              "Async search
+endif
 call vundle#end()
 
 

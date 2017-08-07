@@ -12,8 +12,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'                   
 Plugin 'tpope/vim-vinegar'                      "Upgrades default directory browser
-Plugin 'scrooloose/nerdtree'                    "Ads Treeview
-Plugin 'scrooloose/nerdcommenter'               "Comment/uncomment
+Plugin 'scrooloose/nerdtree'                    "Ads Treeview Plugin 'scrooloose/nerdcommenter'               "Comment/uncomment
 Plugin 'ctrlpvim/ctrlp.vim'                     "Ads ctrl P
 Plugin 'MarcWeber/vim-addon-mw-utils'           "dependency
 Plugin 'tomtom/tlib_vim'                        "dependency
@@ -41,7 +40,10 @@ Plugin 'mileszs/ack.vim'						"Search
 Plugin 'qpkorr/vim-bufkill'						"Buffer killer (leave splits untouched)
 Plugin 'Valloric/YouCompleteMe'                 "Autocomplete
 Plugin 'vim-syntastic/syntastic'                          "Linter
-
+if has('nvim') 
+    Plugin 'eugen0329/vim-esearch'              "Async search
+    Plugin 'Shougo/denite.nvim'                 "Better interface
+    Plugin 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern'} "Autocomplete for javascript
 call vundle#end()
 
 
@@ -163,6 +165,9 @@ set laststatus=2
 "/
 nmap <leader>w :w<cr>
 "/
+"/Refresh syntax highlight with leader-r
+"/
+nmap <leader>r :syntax sync fromstart<cr>
 "/Make it easy to edit the Vimrc file.
 "/
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
@@ -277,6 +282,11 @@ nmap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
 "/Bufkill
 "/
 nmap <leader>bd :BD<CR>
+"/
+"/Denite
+"/
+nmap <leader>ls Denite buffer<cr>
+nmap <leader>lf Denite file_rec<cr>
 "}}}
 
 "-------------------------------- Autocommands {{{

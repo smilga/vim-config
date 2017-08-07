@@ -40,6 +40,8 @@ Plugin 'junegunn/goyo.vim'                      "Distractin free mode
 Plugin 'mileszs/ack.vim'						"Search
 Plugin 'qpkorr/vim-bufkill'						"Buffer killer (leave splits untouched)
 Plugin 'Valloric/YouCompleteMe'                 "Autocomplete
+Plugin 'vim-syntastic/syntastic'                          "Linter
+
 call vundle#end()
 
 
@@ -70,8 +72,9 @@ set guioptions-=L  "remove left-hand scroll bar
 highlight LineNr guifg=#d7d7d7 guibg=bg                 
 
 "}}}
-set guifont=DroidSansMonoForPowerline\ Nerd\ Font\ Bold
-set lsp=8
+"set guifont=Space\ Mono\ Regular
+set guifont=Monospace\ Regular\ 10.5
+set lsp=7
 
 "}}}
 
@@ -93,10 +96,10 @@ set hidden
 nmap <leader>T :enew<cr>
 
 " Move to the next buffer
-nmap <leader>bn :bn<CR>
+nmap <leader>n :bn<CR>
 
 " Move to the previous buffer
-nmap <leader>bp :bp<CR>
+nmap <leader>p :bp<CR>
 
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
@@ -196,6 +199,8 @@ nmap <Leader>god :GoDef<cr>
 "/YouCompleteMe
 "/
 let g:ycm_server_python_interpreter = '/usr/bin/python'
+nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>                " turn off YCM
+nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>                "turn on YCM
 "/
 "/ CtrlP
 "/
@@ -219,11 +224,24 @@ let NERDTreeShowExecutableFlag = 0
 "/
 "/ Syntastic
 "/
-"let g:syntastic_javascript_checkers = ['eslint']
-"let g:syntastic_php_checkers = ['php']
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
+	
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1

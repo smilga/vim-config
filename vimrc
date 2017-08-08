@@ -23,7 +23,6 @@ Plugin 'ervandew/supertab'                      "Allow to use tabs for autocompl
 Plugin 'vim-airline/vim-airline'                "Shows toolbars
 Plugin 'vim-airline/vim-airline-themes'         "Statusbar themes
 Plugin 'airblade/vim-gitgutter'                 "Shows git diffs
-"Plugin 'ryanoasis/vim-devicons'                 "Shows file icons
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'posva/vim-vue'                          "Syntax highlight for .vue files
@@ -40,10 +39,14 @@ Plugin 'mileszs/ack.vim'						"Search
 Plugin 'qpkorr/vim-bufkill'						"Buffer killer (leave splits untouched)
 Plugin 'Valloric/YouCompleteMe'                 "Autocomplete
 Plugin 'vim-syntastic/syntastic'                          "Linter
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'jceb/vim-orgmode'                       "Emacs style orgmode for vim
 if has('nvim') 
     Plugin 'eugen0329/vim-esearch'              "Async search
     Plugin 'Shougo/denite.nvim'                 "Better interface
     Plugin 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern'} "Autocomplete for javascript
+endif
+
 call vundle#end()
 
 
@@ -129,6 +132,7 @@ nmap <C-L> <C-W><C-L>
 set backspace=indent,eol,start              "Force backspace to work as usual
 
 let mapleader = ','                         "Map leader key to comma
+let maplocalleader = '//'                   "Map local leader 
 set autowrite
 set updatetime=250                          "Update vim speed"
 
@@ -138,8 +142,8 @@ set textwidth=0 wrapmargin=0
 
 
 
-inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
-inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
+"inoremap <expr> j ((pumvisible())?("\<C-n>"):("j")) "choose autocomplete
+"inoremap <expr> k ((pumvisible())?("\<C-p>"):("k")) "choose autocomplete
 
 
 
@@ -285,8 +289,8 @@ nmap <leader>bd :BD<CR>
 "/
 "/Denite
 "/
-nmap <leader>ls Denite buffer<cr>
-nmap <leader>lf Denite file_rec<cr>
+nmap <leader>l Denite buffer<cr>
+nmap <leader>f Denite file_rec<cr>
 "}}}
 
 "-------------------------------- Autocommands {{{

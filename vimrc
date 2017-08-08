@@ -289,8 +289,8 @@ nmap <leader>bd :BD<CR>
 "/
 "/Denite
 "/
-nmap <leader>l Denite buffer<cr>
-nmap <leader>f Denite file_rec<cr>
+nmap <leader>l :Denite buffer<cr>
+nmap <leader>f :Denite file_rec<cr>
 "}}}
 
 "-------------------------------- Autocommands {{{

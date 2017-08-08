@@ -100,6 +100,7 @@ hi def link jsTemplateString String
 hi def link jsTemplateBraces String 
 hi! def link jsReturn Conditional
 hi def link jsFunctionKey Function
+hi def link jsModuleAs Conditional
 
 hi! def link phpSpecialFunctions FunctionBuiltin
 hi! def link phpFunctions FunctionBuiltin

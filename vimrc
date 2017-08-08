@@ -132,7 +132,7 @@ nmap <C-L> <C-W><C-L>
 set backspace=indent,eol,start              "Force backspace to work as usual
 
 let mapleader = ','                         "Map leader key to comma
-let maplocalleader = '//'                   "Map local leader 
+let maplocalleader = ' '                   "Map local leader 
 set autowrite
 set updatetime=250                          "Update vim speed"
 

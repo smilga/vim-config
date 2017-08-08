@@ -40,10 +40,12 @@ Plugin 'mileszs/ack.vim'						"Search
 Plugin 'qpkorr/vim-bufkill'						"Buffer killer (leave splits untouched)
 Plugin 'Valloric/YouCompleteMe'                 "Autocomplete
 Plugin 'vim-syntastic/syntastic'                          "Linter
+Plugin 'jceb/vim-orgmode'                       "Vim orgmode
 if has('nvim') 
     Plugin 'eugen0329/vim-esearch'              "Async search
     Plugin 'Shougo/denite.nvim'                 "Better interface
     Plugin 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern'} "Autocomplete for javascript
+endif
 call vundle#end()
 
 
@@ -129,6 +131,7 @@ nmap <C-L> <C-W><C-L>
 set backspace=indent,eol,start              "Force backspace to work as usual
 
 let mapleader = ','                         "Map leader key to comma
+let maplocalleader = ' '                    "Map localleader as <space>
 set autowrite
 set updatetime=250                          "Update vim speed"
 

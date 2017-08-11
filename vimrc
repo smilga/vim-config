@@ -16,10 +16,8 @@ Plugin 'scrooloose/nerdtree'                    "Ads Treeview Plugin 'scrooloose
 Plugin 'ctrlpvim/ctrlp.vim'                     "Ads ctrl P
 Plugin 'MarcWeber/vim-addon-mw-utils'           "dependency
 Plugin 'tomtom/tlib_vim'                        "dependency
-Plugin 'garbas/vim-snipmate'                    "Allow to use snippets
 Plugin 'tpope/vim-surround'                     "Change surrounding 
 Plugin 'tpope/vim-fugitive'                     "Git plugin 
-Plugin 'ervandew/supertab'                      "Allow to use tabs for autocomplete
 Plugin 'vim-airline/vim-airline'                "Shows toolbars
 Plugin 'vim-airline/vim-airline-themes'         "Statusbar themes
 Plugin 'airblade/vim-gitgutter'                 "Shows git diffs
@@ -33,7 +31,6 @@ Plugin 'tikhomirov/vim-glsl'					"GLSL shader language highlights
 Plugin 'KabbAmine/vullScreen.vim'
 Plugin '2072/PHP-Indenting-for-VIm'             "Correct indentation for php files
 Plugin 'jiangmiao/auto-pairs'					"Brackets managing
-Plugin 'vim-scripts/mru'                        "Open recently edited files
 Plugin 'junegunn/goyo.vim'                      "Distractin free mode
 Plugin 'mileszs/ack.vim'						"Search
 Plugin 'qpkorr/vim-bufkill'						"Buffer killer (leave splits untouched)
@@ -41,6 +38,7 @@ Plugin 'Valloric/YouCompleteMe'                 "Autocomplete
 Plugin 'vim-syntastic/syntastic'                          "Linter
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jceb/vim-orgmode'                       "Emacs style orgmode for vim
+Plugin 'SirVer/ultisnips'                       "Snippets
 if has('nvim') 
     Plugin 'eugen0329/vim-esearch'              "Async search
     Plugin 'Shougo/denite.nvim'                 "Better interface
@@ -291,6 +289,12 @@ nmap <leader>bd :BD<CR>
 "/
 nmap <leader>l :Denite buffer<cr>
 nmap <leader>f :Denite file_rec<cr>
+"/
+"/UlitSnips
+"/  
+let g:UltiSnipsExpandTrigger="<C-J>"
+"let g:UltiSnipsJumpForwardTrigger="<S-L>"
+"let g:UltiSnipsJumpBackwardTrigger="<S-K>"
 "}}}
 
 "-------------------------------- Autocommands {{{
@@ -314,6 +318,12 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc  
 
+"}}}
+
+"-------------------------------- MACROS {{{
+"/create javascritp class properties
+"/
+let @p = 'F_lvey]}]}Oget pA() {return this._pA;]}oset pa(pA {this._pA = pa;'
 "}}}
                                                      
 "------------------------FONT------------------------"

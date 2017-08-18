@@ -323,7 +323,7 @@ endfunc
 "-------------------------------- MACROS {{{
 "/create javascritp class properties
 "/
-let @p = 'F_lvey]}]}Oget pA() {return this._pA;]}oset pa(pA {this._pA = pa;'
+let @p = 'F.llvEy]}]}Oget pA() {return this._pA;]}oset pa(pA {this._pA = pa;'
 "}}}
                                                      
 "------------------------FONT------------------------"

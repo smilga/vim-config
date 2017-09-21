@@ -34,15 +34,21 @@ Plugin 'jiangmiao/auto-pairs'					"Brackets managing
 Plugin 'junegunn/goyo.vim'                      "Distractin free mode
 Plugin 'mileszs/ack.vim'						"Search
 Plugin 'qpkorr/vim-bufkill'						"Buffer killer (leave splits untouched)
-Plugin 'Valloric/YouCompleteMe'                 "Autocomplete
+"Plugin 'Valloric/YouCompleteMe'                 "Autocomplete
 Plugin 'vim-syntastic/syntastic'                          "Linter
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jceb/vim-orgmode'                       "Emacs style orgmode for vim
 Plugin 'SirVer/ultisnips'                       "Snippets
+Plugin 'kshenoy/vim-signature' "Mark plugin
 if has('nvim') 
     Plugin 'eugen0329/vim-esearch'              "Async search
     Plugin 'Shougo/denite.nvim'                 "Better interface
-    Plugin 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern'} "Autocomplete for javascript
+    "Plugin 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern'} "Autocomplete for javascript
+    Plugin 'roxma/nvim-completion-manager'
+    Plugin 'roxma/nvim-cm-tern',  {'do': 'npm install'} "javscript completion for completion-manager
+    Plugin 'phpactor/phpactor' ,  {'do': 'composer install'} "php completion for completion-manager
+    Plugin 'calebeby/ncm-css' "css completion for completion-manager
+    Plugin 'floobits/floobits-neovim'
 endif
 
 call vundle#end()
@@ -201,7 +207,8 @@ nmap <Leader>god :GoDef<cr>
 "}}}
 
 "-------------------------------- Plugin specific {{{
-
+"completion-manager
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>" 
 "/
 "/YouCompleteMe
 "/
@@ -295,6 +302,7 @@ nmap <leader>f :Denite file_rec<cr>
 let g:UltiSnipsExpandTrigger="<C-J>"
 "let g:UltiSnipsJumpForwardTrigger="<S-L>"
 "let g:UltiSnipsJumpBackwardTrigger="<S-K>"
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 "}}}
 
 "-------------------------------- Autocommands {{{
